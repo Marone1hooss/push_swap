@@ -33,7 +33,7 @@ int main(int argc, char**argv)
     char ** output=(char**)malloc(10000000*sizeof(char*));
     for (int i=0;i<10000000;i++) output[i]=(char*)malloc(3*sizeof(char));
     int c=0;
-    for (int i=0;i<max_bits+1;i++)
+    for (int i=0;i<max_bits;i++)
     {
         sA.len=0;
         sA.size=2;
@@ -75,12 +75,12 @@ int main(int argc, char**argv)
         free(sB.p);
     }
 
-
+    for (int i=0;i<N;i++) printf("%d ",simplarr[i]);
     printf("\n%d\n",c);
-  /*   for (int i=0;i<c;i++)
+ /*     for (int i=0;i<c;i++)
     {
         printf("%s\n",output[i]);
-    }  */
+    }   */
   
 }
 
